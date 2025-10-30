@@ -56,9 +56,19 @@ Solo se requiere **g++ con soporte C++17** y opcionalmente:
 - `python3 + matplotlib` (gráficas)
 - `gnuplot` (trayectorias / Poincaré / Lyapunov)
 
-Compilar y ejecutar todo:
+Compilar y ejecutar el pendulo con:
 
 ```bash
 make
+
+Hacer el calculo del exponente de Lyapunov con:
+
+```bash
+make lyapunov
+
+Hacer los diagramas de Poincare
+
+```bash
+make poincare
 
 
