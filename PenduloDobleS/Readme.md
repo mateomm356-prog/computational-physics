@@ -61,14 +61,12 @@ Compilar y ejecutar el pendulo con:
 ```bash
 make
 
-Hacer el calculo del exponente de Lyapunov con:
+//Hacer el calculo del exponente de Lyapunov con:
 
-```bash
 make lyapunov
 
-Hacer los diagramas de Poincare
+//Hacer los diagramas de Poincare
 
-```bash
 make poincare
 
 
