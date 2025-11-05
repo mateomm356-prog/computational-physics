@@ -1,0 +1,87 @@
+
+---
+
+## 📘 **Doxyfile (Configuración estándar de Doxygen)**
+
+Guarda esto como `Doxyfile` en la raíz del proyecto.  
+Está configurado con valores **estándar y útiles** para proyectos pequeños en C++.
+
+```txt
+#---------------------------------------------------------------------------
+# Proyecto y documentación
+#---------------------------------------------------------------------------
+
+PROJECT_NAME           = "Simulación de N partículas en una caja"
+PROJECT_BRIEF          = "Simulación en C++ de partículas en una caja con colisiones elásticas"
+PROJECT_NUMBER         = 1.0
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = YES
+
+#---------------------------------------------------------------------------
+# Archivos de entrada y salida
+#---------------------------------------------------------------------------
+
+INPUT                  = ./
+FILE_PATTERNS          = *.cpp *.h *.hpp *.cxx *.cc
+RECURSIVE              = NO
+EXCLUDE_PATTERNS       = */build/* */results/*
+
+#---------------------------------------------------------------------------
+# Formato de salida
+#---------------------------------------------------------------------------
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
+HTML_COLORSTYLE_HUE    = 210
+HTML_COLORSTYLE_SAT    = 100
+HTML_COLORSTYLE_GAMMA  = 80
+
+#---------------------------------------------------------------------------
+# Configuración de documentación
+#---------------------------------------------------------------------------
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+
+INLINE_SOURCES         = YES
+SOURCE_BROWSER         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+#---------------------------------------------------------------------------
+# Aspecto del HTML
+#---------------------------------------------------------------------------
+
+GENERATE_TREEVIEW      = YES
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = ./
+
+#---------------------------------------------------------------------------
+# Lenguaje y codificación
+#---------------------------------------------------------------------------
+
+OUTPUT_LANGUAGE        = Spanish
+ENCODING               = UTF-8
+TAB_SIZE               = 4
+
+#---------------------------------------------------------------------------
+# Gráficos y diagramas
+#---------------------------------------------------------------------------
+
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = svg
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+CLASS_DIAGRAMS         = YES
+DOT_TRANSPARENT        = YES
+
+#---------------------------------------------------------------------------
+# Varias
+#---------------------------------------------------------------------------
+
+QUIET                  = NO
+WARN_IF_UNDOCUMENTED   = YES
+WARN_LOGFILE           = doxygen_warnings.log
