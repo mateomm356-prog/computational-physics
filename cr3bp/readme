@@ -1,29 +1,72 @@
-# CR3BP — Simulación Numérica
+# 🪐 CR3BP — Simulación Numérica
 
-Integración numérica del problema restringido de tres cuerpos (CR3BP) con $\mu = 0.5$
-en el frame rotante, usando el método simpléctico **Leapfrog (Störmer-Verlet)**.
+> Integración numérica del **Problema Restringido de Tres Cuerpos** en el frame rotante  
+> Universidad Distrital Francisco José de Caldas · Programa de Física
+
+---
+
+## ¿Qué hace?
+
+Simula el movimiento de una partícula de masa despreciable $m_3$ bajo la atracción gravitacional de dos cuerpos masivos $m_1$ y $m_2$ con $\mu = 0.5$, usando el integrador simpléctico **Leapfrog (Störmer-Verlet)**, que preserva la estructura hamiltoniana del sistema.
+
+---
 
 ## Estructura
 
-├── include/        # Headers: Body.h, CR3BP.h, Integrator.h
-├── src/            # main.cpp
-├── scripts/        # Graficadores Python
-├── results/        # Salidas: CSV, PNG, GIF
+```
+cr3bp/
+├── include/
+│   ├── Body.h          # Estado de la partícula (x, y, vx, vy)
+│   ├── CR3BP.h         # Ecuaciones de movimiento y parámetros
+│   └── Integrator.h    # Esquema Leapfrog
+├── src/
+│   └── main.cpp        # Simulación principal → results/trajectory.csv
+├── scripts/
+│   ├── graficar.py     # Trayectoria en el frame rotante
+│   ├── animar.py       # Animación GIF
+│   ├── convergencia.py # Verificación de convergencia del método
+│   ├── espacio_fases.py# Espacio de fases (q, p)
+│   ├── marco_inercial.py
+│   └── marco_rotante.py
+├── results/            # Salidas generadas (CSV, PNG, GIF)
 └── Makefile
+```
+
+---
 
 ## Uso
 
 ```bash
-make              # Compila y corre la simulación
-make graficar     # Trayectoria en el frame rotante
-make animar       # Animación GIF
-make convergencia # Verificación de convergencia
-make espacio_fases# Espacio de fases (q, p)
-make todo         # Todo lo anterior
-make clean        # Limpia binarios y resultados
+# Compilar y correr la simulación
+make
+
+# Visualizaciones
+make graficar        # Trayectoria en el frame rotante
+make animar          # Animación GIF
+make convergencia    # Verificación de convergencia
+make espacio_fases   # Espacio de fases (q, p)
+
+# Todo en secuencia
+make todo
+
+# Limpiar
+make clean
 ```
+
+---
 
 ## Requisitos
 
-- `g++` con soporte C++17
-- Python 3 con `numpy` y `matplotlib`
+| Herramienta | Versión mínima |
+|---|---|
+| `g++` | C++17 |
+| Python | 3.8+ |
+| `numpy` | cualquiera |
+| `matplotlib` | cualquiera |
+
+---
+
+## Autores
+
+**Mateo Maldonado Valencia** · **John Díaz Forero**  
+Programa Académico de Física · Universidad Distrital Francisco José de Caldas
