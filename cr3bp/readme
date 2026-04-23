@@ -1,0 +1,29 @@
+# CR3BP — Simulación Numérica
+
+Integración numérica del problema restringido de tres cuerpos (CR3BP) con $\mu = 0.5$
+en el frame rotante, usando el método simpléctico **Leapfrog (Störmer-Verlet)**.
+
+## Estructura
+
+├── include/        # Headers: Body.h, CR3BP.h, Integrator.h
+├── src/            # main.cpp
+├── scripts/        # Graficadores Python
+├── results/        # Salidas: CSV, PNG, GIF
+└── Makefile
+
+## Uso
+
+```bash
+make              # Compila y corre la simulación
+make graficar     # Trayectoria en el frame rotante
+make animar       # Animación GIF
+make convergencia # Verificación de convergencia
+make espacio_fases# Espacio de fases (q, p)
+make todo         # Todo lo anterior
+make clean        # Limpia binarios y resultados
+```
+
+## Requisitos
+
+- `g++` con soporte C++17
+- Python 3 con `numpy` y `matplotlib`
